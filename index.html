@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Medicina</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>Medicina</h1>
+            <div class="gpa-container">
+                <span class="gpa-label">Promedio Ponderado:</span>
+                <span id="gpa-value" class="gpa-value">--</span>
+            </div>
+        </div>
+        <button onclick="resetProgress()" class="btn-reset">Reiniciar</button>
+    </header>
+
+    <div class="malla-container" id="malla-container">
+        </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title">Título</h3>
+            <p id="modal-message"></p>
+            
+            <div id="grade-input-container" style="display:none; margin-top:15px;">
+                <label for="grade-input">Ingresa tu nota final:</label>
+                <input type="number" id="grade-input" step="0.1" min="1.0" max="7.0" placeholder="Ej: 6.5">
+                <button onclick="confirmGrade()" class="btn-save">Aprobar Ramo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
